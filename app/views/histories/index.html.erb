@@ -1,18 +1,20 @@
 <h1>Listing Timeline</h1>
 
-<br>
+<%= link_to 'New Timeline', new_history_path, :class => "btn btn-primary" %>
+<br />
+
+<br />
 <script>
   $(document).ready(function() {
     createStoryJS({
       type:       'timeline',
       width:      '1200',
-      height:     '600',
+      height:     '500',
       source:     '<%= @histories %>',
       embed_id:   'my-timeline'
     });
   });
 </script>
 <div id="my-timeline"></div>
-<%= link_to 'New Timeline', new_history_path %>
 
 
