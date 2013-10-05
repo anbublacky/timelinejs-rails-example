@@ -4,6 +4,10 @@ https://github.com/NanJingBoy/timelineJS-rails
 
 https://github.com/NUKnightLab/TimelineJS (for json format and other options)
 
+Demo app at :
+
+http://timelinejs-rails-example.herokuapp.com
+
 
 Uncaught TypeError: Cannot call method 'appendChild' of null 
 
