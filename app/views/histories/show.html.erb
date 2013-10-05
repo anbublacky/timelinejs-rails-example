@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Startdate:</strong>
+  <%= @history.startdate %>
+</p>
+
+<p>
+  <strong>Enddate:</strong>
+  <%= @history.enddate %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @history.content %>
+</p>
+
+<p>
+  <strong>Headline:</strong>
+  <%= @history.headline %>
+</p>
+
+<p>
+  <strong>Media:</strong>
+  <%= @history.media %>
+</p>
+
+<p>
+  <strong>Mediacaption:</strong>
+  <%= @history.mediacaption %>
+</p>
+
+<p>
+  <strong>Mediacredit:</strong>
+  <%= @history.mediacredit %>
+</p>
+
+<%= link_to 'Edit', edit_history_path(@history) %> |
+<%= link_to 'Back', histories_path %>

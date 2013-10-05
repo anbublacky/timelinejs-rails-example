@@ -1,0 +1,18 @@
+<h1>Listing Timeline</h1>
+
+<br>
+<script>
+  $(document).ready(function() {
+    createStoryJS({
+      type:       'timeline',
+      width:      '1200',
+      height:     '600',
+      source:     '<%= @histories %>',
+      embed_id:   'my-timeline'
+    });
+  });
+</script>
+<div id="my-timeli"></div>
+<%= link_to 'New Timeline', new_history_path %>
+
+

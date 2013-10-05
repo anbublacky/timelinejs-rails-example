@@ -1,0 +1,45 @@
+<%= form_for @history, :html => {:class => "horizontal-form", :role => "form"} do |f| %>
+  <% if @history.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@history.errors.count, "error") %> prohibited this history from being saved:</h2>
+
+      <ul>
+      <% @history.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :startdate %>
+    <%= f.date_select :startdate, {:start_year => Time.now.year - 100, :end_year => Time.now.year} %>
+  </div>
+  <div class="form-group">
+    <%= f.label :enddate %>
+    <%= f.date_select :enddate %>
+  </div>
+  <div class="form-group">
+    <%= f.label :content %>
+    <%= f.text_field :content %>
+  </div>
+  <div class="form-group">
+    <%= f.label :headline %>
+    <%= f.text_field :headline %>
+  </div>
+  <div class="form-group">
+    <%= f.label :media, "Youtube/Vimeo URL" %>
+    <%= f.text_field :media %>
+  </div>
+  <div class="form-group">
+    <%= f.label :mediacaption %>
+    <%= f.text_field :mediacaption %>
+  </div>
+  <div class="form-group">
+    <%= f.label :mediacredit %>
+    <%= f.text_field :mediacredit %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Create Timeline", :class => "btn btn-primary" %>
+  </div>
+<% end %>
